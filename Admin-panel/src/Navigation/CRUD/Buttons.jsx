@@ -26,7 +26,7 @@ function Buttons({ users, fetchUsers }) {
       setLoading((prev) => ({ ...prev, [actionType.toLowerCase()]: true }));
       setError(null);
 
-      const apiURL = "http://localhost:5000/users";
+      const apiURL = "https://backend-admin-pannel.onrender.com/users";
       if (actionType === "Create") {
         await axios.post(apiURL, formData);
       } else if (actionType === "Update" && selectedUserId) {
